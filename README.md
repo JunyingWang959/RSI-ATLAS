@@ -1,19 +1,33 @@
-# RSI Atlas website
+# RSI Atlas
 
-Static website only: overview leaderboard, task descriptions, complete trajectory visualizations, and the English results article.
+Can agents inherit previous work and improve it further? RSI Atlas evaluates 6 models across 50 tasks, using two rounds of artifact and experience inheritance.
 
-## Publish
+**[Explore the website →](https://junyingwang959.github.io/RSI-ATLAS/)**
 
-Upload the contents of this folder to the repository root. In GitHub Pages settings, choose Deploy from a branch, your publication branch, and / (root).
+## Leaderboard
 
-Open `index.html` for the website and `report/REPORT.html` for the article. For a local preview, run `python -m http.server 18201` in this folder and visit http://localhost:18201/.
+Average scores out of 100, ranked by A2.
 
-The result snapshot and research records are embedded in the page. Charts run in the browser without a backend or API keys. Google Fonts are optional; system fonts are used when unavailable.
+| Model | A0 | A1 | A2 | Ignition I |
+| --- | ---: | ---: | ---: | ---: |
+| GPT-5.6 Sol | 62.03 | 68.41 | 69.28 | 0.16 |
+| MiniMax M3 | 60.10 | 66.48 | 67.16 | 0.13 |
+| Gemini 3.1 Pro | 61.60 | 65.87 | 66.03 | 0.04 |
+| DeepSeek V4.1 Flash | 56.82 | 63.12 | 63.46 | 0.06 |
+| Kimi K2.7 | 54.46 | 58.76 | 60.29 | 0.39 |
+| MiMo V2.6 Pro | 56.12 | 59.74 | 60.16 | 0.13 |
 
-This package excludes experiment runners, evaluation code, frozen artifact source files, datasets, and build tools. The trajectory view uses recorded scores and research notes; artifact files are not distributed in this website-only package.
+**A0**: baseline · **A1**: after round 1 · **A2**: after round 2
 
-Original website code is licensed under MIT. No external upload has been performed by packaging these files.
+**Ignition I** compares the share of remaining score headroom gained in round 2 with round 1:
 
-## Results scope
+```text
+I = [(A2 − A1) / (100 − A1)] / [(A1 − A0) / (100 − A0)]
+```
 
-The overall leaderboard covers 50 tasks: 10 open-source and 40 closed-source. Final aggregate scores were supplied by the project owner from experiments on another computer; the three updated model summaries replace the previous values, with other models retained as instructed. The bundled public-task traces remain the earlier recorded evidence and do not constitute the full 50-task evaluation dataset.
+All six models improve in both rounds, with smaller normalized gains in round 2.
+
+## Tasks & trajectories
+
+Explore the [10 open-source tasks](https://junyingwang959.github.io/RSI-ATLAS/#tasks) and [available complete trajectories](https://junyingwang959.github.io/RSI-ATLAS/#trajectories), covering code, policies, workflows, and memory. 
+
