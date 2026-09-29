@@ -10,11 +10,11 @@ Average scores out of 100, ranked by A2.
 
 | Model | A0 | A1 | A2 | Ignition I |
 | --- | ---: | ---: | ---: | ---: |
-| GPT-5.6 Sol | 62.03 | 68.41 | 69.28 | 0.16 |
+| GPT-6 Sol | 62.03 | 68.41 | 69.28 | 0.16 |
 | MiniMax M3 | 60.10 | 66.48 | 67.16 | 0.13 |
 | Gemini 3.1 Pro | 61.60 | 65.87 | 66.03 | 0.04 |
 | DeepSeek V4.1 Flash | 56.82 | 63.12 | 63.46 | 0.06 |
-| Kimi K2.7 | 54.46 | 58.76 | 60.29 | 0.39 |
+| Kimi K3 | 54.46 | 58.76 | 60.29 | 0.39 |
 | MiMo V2.6 Pro | 56.12 | 59.74 | 60.16 | 0.13 |
 
 **A0**: baseline · **A1**: after round 1 · **A2**: after round 2
